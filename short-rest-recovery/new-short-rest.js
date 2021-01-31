@@ -84,9 +84,9 @@ export default class newShortRestDialog extends Dialog {
 			chef: []
 		}
 
-		let wizard_druid_class_item = this.actor.items.find(i => i.type === "class" && (i.name == "Wizard" || i.name == "Druid"));
+		let wizard_druid_class_item = this.actor.items.find(i => i.type === "class" && (i.name == "Wizard" || i.name == "Druid" || i.name == "Magicien"));
 		
-		let item = this.actor.items.find(i => i.name.toLowerCase() === "arcane recovery" || i.name.toLowerCase() === "natural recovery");
+		let item = this.actor.items.find(i => i.name.toLowerCase() === "arcane recovery" || i.name.toLowerCase() === "natural recovery" || i.name.toLowerCase() === "Restauration magique [Magicien]");
 
 		if(wizard_druid_class_item && wizard_druid_class_item.data.data.levels > 1 && item && item.data.data.uses.value != 0){
 
